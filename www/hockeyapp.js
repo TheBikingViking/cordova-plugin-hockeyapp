@@ -6,6 +6,9 @@ var hockeyapp = {
     },
     feedback:function(success, failure) {
         exec(success, failure, "HockeyApp", "feedback", []);
+    },
+    update:function(success, failure, token) {
+        exec(success, failure, "HockeyApp", "update", [ token ]);
     }
 };
 

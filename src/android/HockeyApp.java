@@ -1,5 +1,6 @@
 package com.zengularity.cordova.hockeyapp;
 
+import net.hockeyapp.android.UpdateManager;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
@@ -34,8 +35,12 @@ public class HockeyApp extends CordovaPlugin {
                 callbackContext.error("cordova hockeyapp plugin not initialized, call start() first");
                 return false;
             }
-        }
-        else {
+        } else if(action.equals("update")) {
+            token = args.optString(0);
+            UpdateManager.register(cordova.getActivity(), token);
+            callbackContext.success();
+            return true;
+        } else {
             return false;
         }
     }

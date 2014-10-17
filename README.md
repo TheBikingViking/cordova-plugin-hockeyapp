@@ -5,7 +5,7 @@ This plugin exposes the HockeyApp SDK for ios and android
 Including:
 
 * HockeyAppSDK-iOS 3.5.4
-* HockeyAppSDK-Android 3.0.1
+* HockeyAppSDK-Android 3.0.2
 
 ## Installation
 
@@ -25,6 +25,10 @@ Initialize HockeyApp SDK
 - hockeyapp.feedback(sucess:function, error:function):void
 
 Display tester feedback UI
+
+- hockeyapp.update(success:function, error:function, appid:string):void
+
+Check for app updates
 
 ## Android tips
 
